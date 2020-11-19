@@ -1,0 +1,29 @@
+{
+    "name": "WhiteBerry PWA",
+    "short_name": "WhiteBerry",
+    "start_url": "/index.html",
+    "scope": "/",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "./assets/manifest/whiteberry192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./assets/manifest/whiteberry192x192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./assets/manifest/whiteberry512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+
+    ]
+}

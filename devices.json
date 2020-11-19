@@ -1,0 +1,208 @@
+{
+    "items": [
+        {
+            "sys": { "id": 1 },
+            "fields": {
+                "category": "mobile",
+                "name": "OnePlus Nord",
+                "price": 29999,
+                "spec": {
+                    "ram": 8,
+                    "storage": 128
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/oneplusnord.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 2 },
+            "fields": {
+                "category": "mobile",
+                "name": "iPhone 11",
+                "price": 51499,
+                "spec": {
+                    "ram": 8,
+                    "storage": 256
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/iphone11.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 3 },
+            "fields": {
+                "category": "laptop",
+                "name": "Dell Alienware",
+                "price": 351499,
+                "spec": {
+                    "ram": 16,
+                    "storage": 1024
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/dellalienware.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 4 },
+            "fields": {
+                "category": "laptop",
+                "name": "Macbook Air",
+                "price": 151499,
+                "spec": {
+                    "ram": 16,
+                    "storage": 1024
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/macbookair.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 5 },
+            "fields": {
+                "category": "mobile",
+                "name": "iPhone 12",
+                "price": 120999,
+                "spec": {
+                    "ram": 16,
+                    "storage": 256
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/iphone12.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 6 },
+            "fields": {
+                "category": "laptop",
+                "name": "Dell Inspiron",
+                "price": 53499,
+                "spec": {
+                    "ram": 4,
+                    "storage": 512
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/dell.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 7 },
+            "fields": {
+                "category": "laptop",
+                "name": "Asus Rog",
+                "price": 91999,
+                "spec": {
+                    "ram": 8,
+                    "storage": 512
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/asusrog.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 8 },
+            "fields": {
+                "category": "mobile",
+                "name": "OnePlus 8",
+                "price": 40999,
+                "spec": {
+                    "ram": 6,
+                    "storage": 128
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/oneplus8.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 9 },
+            "fields": {
+                "category": "headphone",
+                "name": "Bose",
+                "price": 34400,
+                "spec": {
+                    "ram": "",
+                    "storage": ""
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/bose.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 10 },
+            "fields": {
+                "category": "headphone",
+                "name": "Sony",
+                "price": 7990,
+                "spec": {
+                    "ram": "",
+                    "storage": ""
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/sony.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 11 },
+            "fields": {
+                "category": "headphone",
+                "name": "JBL",
+                "price": 12999,
+                "spec": {
+                    "ram": "",
+                    "storage": ""
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/jbl.png" }
+                    }
+                }
+            }
+        },
+        {
+            "sys": { "id": 12 },
+            "fields": {
+                "category": "headphone",
+                "name": "Sennheiser",
+                "price": 9999,
+                "spec": {
+                    "ram": "",
+                    "storage": ""
+                },
+                "image": {
+                    "fields": {
+                        "file": { "url": "./assets/data/sennheiser.png" }
+                    }
+                }
+            }
+        }
+    ]
+}
