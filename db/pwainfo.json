@@ -1,0 +1,42 @@
+{
+    "about": [
+        {
+            "intro": "The web is an incredible platform. Its mix of ubiquity across devices and operating systems, its user-centered security model, and the fact that neither its specification nor its implementation is controlled by a single company makes the web a unique platform to develop software on. Combined with its inherent linkability, it's possible to search it and share what you've found with anyone, anywhere. Whenever you go to a website, it's up-to-date, and your experience with that site can be as ephemeral or as permanent as you'd like. Web applications can reach anyone, anywhere, on any device with a single codebase.",
+            "intro2": "Platform-specific applications, are known for being incredibly rich and reliable. They're ever-present, on home screens, docks, and taskbars. They work regardless of network connection. They launch in their own standalone experience. They can read and write files from the local file system, access hardware connected via USB, serial or bluetooth, and even interact with data stored on your device, like contacts and calendar events. In these applications, you can do things like take pictures, see playing songs listed on the home screen, or control song playback while in another app. Platform-specific applications feel like part of the device they run on.",
+            "intro3": "If you think about platform-specific apps and web apps in terms of capabilities and reach, platform-specific apps represent the best of capabilities whereas web apps represent the best of reach. So where do Progressive Web Apps fit in?",
+            "intro4": "Progressive Web Apps (PWA) are built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device with a single codebase.",
+            "headsub": "The three app pillars",
+            "headsubintro": "Progressive Web Apps are web applications that have been designed so they are capable, reliable, and installable. These three pillars transform them into an experience that feels like a platform-specific application.",
+            "subcategory": ["capable", "reliable", "instalable"],
+            "conclusion": [
+                {
+                    "title": "the best of both worlds",
+                    "content": "At their heart, Progressive Web Apps are just web applications. Using progressive enhancement, new capabilities are enabled in modern browsers. Using service workers and a web app manifest, your web application becomes reliable and installable. If the new capabilities aren't available, users still get the core experience.",
+                    "important": "Progressive Web Apps provide you with a unique opportunity to deliver a web experience your users will love. Using the latest web features to bring enhanced capabilities and reliability, Progressive Web Apps allow what you build to be installed by anyone, anywhere, on any device with a single codebase."
+                }
+            ]
+        }
+    ],
+    "faq": [
+        {
+            "q": "why pwa is the future",
+            "a": ["PWAs are powerful, effective, fast and app-like. It's hard to imagine a mobile web property that could not be significantly improved via PWA implementation. They can also potentially eliminate the need for many “vanity” native apps that exist today."]
+        },
+        {
+            "q": "who is using progressive we apps",
+            "a": ["forbes", "flipkart", "twitter", "alibaba", "the weather channel", "the washington post"]
+        },
+        {
+            "q": "What are core progressive web app checklist",
+            "a": ["starts fast, stays fast", "works in any browser", "responsive to any screen", "provides a custom offline page", "is installable"]
+        },
+        {
+            "q": "What are optimal progressive web app checklist",
+            "a": ["provides offline experience", "is fully accesible", "can be discovered through search", "works with any input type", "provides context for permission requests", "follows best prctices for healthy code"]
+        },
+        {
+            "q": "do progressive web apps work on iOS",
+            "a": ["With iOS 11.3, Apple has silently added support for the basic set of new technologies behind the idea of “ Progressive Web Apps ” (PWAs)."]
+        }
+    ]
+}

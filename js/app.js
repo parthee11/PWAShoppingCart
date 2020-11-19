@@ -1,6 +1,6 @@
 const cartBtn = document.querySelector('.cart-btn');
 const cartMenu = document.querySelector('.cart-menu');
-const closeCart = document.querySelector('.close-cart')
+const closeCart = document.querySelector('.close-cart');
 const shopBelow = document.querySelector('.shop-below-btn');
 const cartTotal = document.querySelector('.cart-total h3 span');
 const cartNotifier = document.querySelector('.cart-notifier');
@@ -12,8 +12,10 @@ let cart = [];
 let addCartBtnsDOM = [];
 
 // functions
+// cart menu
 const cartMenuHandler = (e) => {
     cartMenu.classList.toggle('open-cart');
+    sideMenu.classList.remove('open-menu');
 }
 
 const cartMenuEmptySpaceClose = (e) => {
@@ -23,9 +25,10 @@ const cartMenuEmptySpaceClose = (e) => {
 }
 
 const closeCartHandler = (e) => {
-    cartMenu.classList.remove('open-cart')
+    cartMenu.classList.remove('open-cart');
 }
 
+// jumbotron cta
 const smoothScrollHandler = (e) => {
     const href = e.target.getAttribute('href');
     const offsetTop = document.querySelector(href).offsetTop - 70;
@@ -39,9 +42,11 @@ const smoothScrollHandler = (e) => {
 // DOM Content Loaded event
 document.addEventListener('DOMContentLoaded', () => {
     // events
+    // cart menu
     cartBtn.addEventListener('click', cartMenuHandler);
     cartMenu.addEventListener('click', cartMenuEmptySpaceClose);
     closeCart.addEventListener('click', closeCartHandler);
+    // jumbotron cta
     shopBelow.addEventListener('click', smoothScrollHandler);  
 
     // ****** instantiating Classes ***** //  

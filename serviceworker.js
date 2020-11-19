@@ -1,15 +1,13 @@
 const cacheName = 'wb-v1';
+const dynamicCache = 'wb-dyn-v1';
 const cacheAssets = [
+    '/',
     './index.html',
     './css/style.css',
     './js/storage.js',
-    './js/devices.js',
-    './js/ui.js',
     './js/app.js',
     './assets/whiteBerryPWA.png',
     './assets/whiteBerryPWAlight.png',
-    './assets/manifest/whiteberry192x192.png',
-    './assets/manifest/whiteberry512x512.png',
 ]
 
 // install
@@ -45,7 +43,12 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(
         caches.match(e.request)
             .then(res => {
-                return res || fetch(e.request)
+                return res || fetch(e.request).then((fetchRes) => {
+                    return caches.open(dynamicCache).then((cache) => {
+                        cache.put(e.request.url, fetchRes.clone())
+                        return fetchRes;
+                    })
+                })
             })
     )
 }) 

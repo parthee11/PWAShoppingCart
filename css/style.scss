@@ -37,15 +37,38 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1rem;
     box-shadow: 0 1px 5px rgba($color: #000000, $alpha: 0.3);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
+    // menu-btn 
+    .menu-btn {
+        button {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: none;
+            background: $light;
+            cursor: pointer;
+            transition: $transition3s;
+            &:hover {
+                background: $secondary;
+                color: $light;
+            }
+            i {
+                font-size: 1.3rem;
+                pointer-events: none;
+            }
+        }
+    }
     // logo
     .logo {
-        width: calc( 100% - 40px );
+        // width: calc( 100% - 40px );
         text-align: center;
         img {
             width: 150px;
@@ -67,7 +90,7 @@ header {
             background: $light;
             color: $dark;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             transition: $transition3s;
             i {
                 pointer-events: none;
@@ -111,6 +134,64 @@ header {
     }
 }
 // header end // 
+
+// side menu //
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.5);
+    opacity: 0;
+    z-index: -1;
+    .side-menu-content {
+        max-width: 400px;
+        height: calc(100vh - 77px);
+        margin-right: auto;
+        margin-top: 77px;
+        background: $light;
+        transform: translateX(-100%);
+        transition: $transition3s;
+        position: relative;
+        padding: 2rem;
+        .nav-list {
+            .nav-item {
+                margin-bottom: 0.5rem;
+                width: 100%;
+                a {
+                    display: block;
+                    padding: 0.75rem 1rem;
+                    background: $light;
+                    transition: $transition3s;
+                    i {
+                        pointer-events: none;
+                        padding-right: 0.5rem;
+                        color: $secondary;
+                        opacity: 0.5;
+                        transition: $transition3s;
+                    }
+                    &:hover {
+                        background: $secondary;
+                        color: $light;
+                        i {
+                            color: $light;
+                            opacity: 0.75;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.open-menu {
+    opacity: 1;
+    z-index: 1;
+    .side-menu-content {
+        transform: translateX(0);
+    }
+}
+// side menu end //
 
 // cart-menu //
 .cart-menu {
@@ -463,6 +544,138 @@ footer {
     }
 }
 // footer end //
+
+// about section //
+.about {
+    margin-top: 75px;
+    .container {
+        padding: 2rem;
+        h2 {
+            padding-bottom: 1rem;
+        }
+        .content {
+            .pwa {
+                padding-bottom: 2rem;
+                h3, h4 {
+                    padding-bottom: 1rem;
+                    text-transform: capitalize;
+                }
+                p {
+                    line-height: 1.5;
+                    padding-bottom: 1rem;
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+                .three-pillars {
+                    padding-bottom: 1rem;
+                    li {
+                        text-transform: capitalize;
+                        padding-bottom: 0.5rem;
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        i {
+                            padding-right: 0.75rem;
+                        }
+                    }
+                }
+                .conclusion {
+                    .important {
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}
+// about section end //
+
+// reference //
+.reference {
+    span {
+        a {
+            text-decoration: underline;
+            color: #000080;
+        }
+    }
+}
+// reference end //
+
+// faq section //
+.faqs {
+    margin-top: 75px;
+    min-height: calc(100vh - 75px);
+    .container {
+        padding: 2rem;
+        h2 {
+            padding-bottom: 1rem;
+        }
+        .faq-content {
+            padding-bottom: 2rem;
+            p {
+                line-height: 1.5;
+            }
+            .faq-list {
+                .faq-item {
+                    .faq-q {
+                        text-transform: capitalize;
+                        padding: 1rem;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid rgba($color: $dark, $alpha: 0.3);
+                        margin-bottom: 0.5rem;
+                        span {
+                            font-weight: bold;
+                            width: 100%;
+                            pointer-events: none;
+                        }
+                        i {
+                            pointer-events: none;
+                            transition: $transition3s;
+                        }
+                    }
+                    .faq-a {
+                        padding: 0 1rem;
+                        height: 0;
+                        transition: $transition3s;
+                        li {
+                            padding-bottom: 0.5rem;
+                            overflow: hidden;
+                            p {
+                                text-transform: capitalize;
+                                transform: translateY(-100%);
+                                opacity: 0;
+                                transition: $transition3s;
+                                i {
+                                    padding-right: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .expand-a {
+                    .faq-q {
+                        i {
+                            transform: rotateZ(180deg);
+                        }
+                    }
+                    .faq-a {
+                        height: auto;
+                        padding-bottom: 1rem;
+                        li {
+                            p {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// faq section  //
 
 // ********************************************** //
 

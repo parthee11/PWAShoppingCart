@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteBerry | FAQs</title>
+    <link rel="shortcut icon" href="../assets/manifest/whiteberry192x192.png" type="image/png">
+    <!-- line icons -->
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- manifest -->
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../assets/manifest/whiteberry192x192.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#000000">
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="menu-btn">
+            <button>
+                <i class="lni lni-menu"></i>
+            </button>
+        </div>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/whiteBerryPWA.png" alt="whiteberry-logo">
+            </a>
+        </div>
+        <div class="cart">
+            <!-- empty -->
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- side menu -->
+    <div class="side-menu">
+        <div class="side-menu-content">
+            <ul class="nav-list">
+                <div class="nav-item">
+                    <a href="../index.html"><i class="lni lni-home"></i>Home</a>
+                </div>
+                <li class="nav-item">
+                    <a href="./about.html"><i class="lni lni-question-circle"></i>About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./faq.html"><i class="lni lni-quotation"></i>FAQs</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- side menu end -->
+
+    <!-- main -->
+    <main>
+
+        <!-- faq section -->
+        <div class="faqs">
+            <div class="container">
+                <h2>FAQs</h2>
+                <div class="faq-content">
+                    <!-- data fro pwa.json  -->
+                </div>
+                <div class="reference">
+                    <span>Reference: 
+                        <a href="https://web.dev/what-are-pwas/" target="_blank">
+                            https://web.dev/what-are-pwas/
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- faq section end -->
+        
+    </main>
+    <!-- main end --> 
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="content">
+                <img src="../assets/whiteBerryPWAlight.png" alt="whiteberry-logo-light">
+                <p>Copyrights &copy; 2020. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- custom Js -->
+    <script src="../js/pwa.js"></script>
+    <script>
+        // service worker register
+        // if( 'serviceWorker' in navigator ) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('./serviceworker.js')
+        //             .then((reg) => {
+        //                 console.log("Service Worker: Registered", reg.scope)
+        //             })
+        //             .catch((err) => {
+        //                 console.log("Service Worker: Failed!")
+        //             })
+        //     })
+        // }
+
+        // DOM elements
+        const menuBtn = document.querySelector('.menu-btn button');
+        const sideMenu = document.querySelector('.side-menu');
+
+        // side menu functions
+        const sideMenuHandler = (e) => {
+            sideMenu.classList.toggle('open-menu');
+        }
+
+        const sideMenuEmptySpaceClose = (e) => {
+            e.target.classList.contains('side-menu') && (
+                sideMenu.classList.remove('open-menu')
+            )
+        }
+        // side menu events
+        menuBtn.addEventListener('click', sideMenuHandler);
+        sideMenu.addEventListener('click', sideMenuEmptySpaceClose);
+    </script>
+</body>
+</html>

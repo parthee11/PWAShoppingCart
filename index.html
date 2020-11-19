@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA Shopping Cart</title>
+    <title>WhiteBerry | Modern PWA</title>
     <link rel="shortcut icon" href="./assets/manifest/whiteberry192x192.png" type="image/png">
     <!-- line icons -->
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
@@ -19,8 +19,15 @@
 
     <!-- header -->
     <header>
+        <div class="menu-btn">
+            <button>
+                <i class="lni lni-menu"></i>
+            </button>
+        </div>
         <div class="logo">
-            <img src="./assets/whiteBerryPWA.png" alt="whiteberry-logo">
+            <a href="./index.html">
+                <img src="./assets/whiteBerryPWA.png" alt="whiteberry-logo">
+            </a>
         </div>
         <div class="cart">
             <button class="cart-btn">
@@ -32,6 +39,24 @@
         </div>
     </header>
     <!-- header end -->
+
+    <!-- side menu -->
+    <div class="side-menu">
+        <div class="side-menu-content">
+            <ul class="nav-list">
+                <div class="nav-item">
+                    <a href="/"><i class="lni lni-home"></i>Home</a>
+                </div>
+                <li class="nav-item">
+                    <a href="/pages/about.html"><i class="lni lni-question-circle"></i>About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/pages/faq.html"><i class="lni lni-quotation"></i>FAQs</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- side menu end -->
 
     <!-- cart menu -->
     <div class="cart-menu">
@@ -126,17 +151,37 @@
     <script src="./js/ui.js"></script>
     <script src="./js/app.js"></script>
     <script>
-        if( 'serviceWorker' in navigator ) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./serviceworker.js')
-                    .then((reg) => {
-                        console.log("Service Worker: Registered", reg.scope)
-                    })
-                    .catch((err) => {
-                        console.log("Service Worker: Failed!")
-                    })
-            })
+        // service worker register
+        // if( 'serviceWorker' in navigator ) {
+        //     window.addEventListener('load', () => {
+        //         navigator.serviceWorker.register('./serviceworker.js')
+        //             .then((reg) => {
+        //                 console.log("Service Worker: Registered", reg.scope)
+        //             })
+        //             .catch((err) => {
+        //                 console.log("Service Worker: Failed!")
+        //             })
+        //     })
+        // }
+
+        // DOM elements
+        const menuBtn = document.querySelector('.menu-btn button');
+        const sideMenu = document.querySelector('.side-menu');
+
+        // side menu functions
+        const sideMenuHandler = (e) => {
+            sideMenu.classList.toggle('open-menu');
+            cartMenu.classList.remove('open-cart'); //cartMenu declared in app.js
         }
+
+        const sideMenuEmptySpaceClose = (e) => {
+            e.target.classList.contains('side-menu') && (
+                sideMenu.classList.remove('open-menu')
+            )
+        }
+        // side menu events
+        menuBtn.addEventListener('click', sideMenuHandler);
+        sideMenu.addEventListener('click', sideMenuEmptySpaceClose);
     </script>
 </body>
 </html>

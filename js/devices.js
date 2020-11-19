@@ -1,6 +1,6 @@
 class Devices {
     async getDevices() {
-        let response = await fetch('./devices.json');
+        let response = await fetch('./db/devices.json');
         let data = await response.json();
         let devices = data.items;
         devices = devices.map(device => {
