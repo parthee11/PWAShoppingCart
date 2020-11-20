@@ -677,6 +677,44 @@ footer {
 }
 // faq section  //
 
+// fallback section //
+.fallback {
+    margin-top: 75px;
+    height: calc(100vh - 75px);
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p {
+                font-size: 2.5rem;
+                padding-bottom: 1.5rem;
+            }
+            .check-mes {
+                font-size: 1rem;
+            }
+            a {
+                padding: 1rem 0;
+                background: $dark;
+                color: $light;
+                transition: $transition3s;
+                display: block;
+                width: 250px;
+                text-align: center;
+                &:hover {
+                    background: $secondary;
+                }
+            }
+        }
+    }
+}
+// fallback section end //
+
 // ********************************************** //
 
 // responsive //

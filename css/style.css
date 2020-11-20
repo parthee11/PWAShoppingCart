@@ -842,6 +842,64 @@ footer .container .content p {
           transform: translateY(0);
 }
 
+.fallback {
+  margin-top: 75px;
+  height: calc(100vh - 75px);
+}
+
+.fallback .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.fallback .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fallback .container .content p {
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.fallback .container .content .check-mes {
+  font-size: 1rem;
+}
+
+.fallback .container .content a {
+  padding: 1rem 0;
+  background: #000000;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+  width: 250px;
+  text-align: center;
+}
+
+.fallback .container .content a:hover {
+  background: #ff0000;
+}
+
 @media (min-width: 320px) and (max-width: 374px) {
   .cart-menu .cart-section .cart-list {
     padding: 1rem 1.5rem;

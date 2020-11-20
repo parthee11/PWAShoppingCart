@@ -1,8 +1,8 @@
 {
     "name": "WhiteBerry PWA",
     "short_name": "WhiteBerry",
-    "start_url": "/index.html",
-    "scope": "/",
+    "start_url": "./",
+    "scope": "./",
     "theme_color": "#000000",
     "background_color": "#ffffff",
     "display": "standalone",

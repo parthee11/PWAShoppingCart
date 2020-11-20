@@ -1,24 +1,24 @@
-const cacheName = 'wb-v1';
-const dynamicCache = 'wb-dyn-v1';
+// static cache variable
+const staticCacheName = 'st-v1';
+// dynamic cache variable
+const dynamicCacheName = 'dyn-v1';
+// precache values
 const cacheAssets = [
     '/',
     './index.html',
     './css/style.css',
-    './js/storage.js',
-    './js/app.js',
+    './pages/fallback.html',
     './assets/whiteBerryPWA.png',
-    './assets/whiteBerryPWAlight.png',
+    './assets/whiteBerryPWAlight.png'
 ]
 
 // install
 self.addEventListener('install', (e) => {
+    self.skipWaiting();
     e.waitUntil(
-        caches.open(cacheName)
+        caches.open(staticCacheName)
             .then(cache => {
-                cache.addAll(cacheAssets)
-            })
-            .then(() => {
-                self.skipWaiting()
+                return cache.addAll(cacheAssets)
             })
     )
 })
@@ -29,8 +29,8 @@ self.addEventListener('activate', (e) => {
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map(cache => {
-                    if(cache !== cacheName) {
-                        caches.delete(cache)
+                    if(cache !== staticCacheName && cache !== dynamicCacheName ) {
+                        return caches.delete(cache)
                     }
                 })
             )
@@ -42,13 +42,23 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
     e.respondWith(
         caches.match(e.request)
-            .then(res => {
-                return res || fetch(e.request).then((fetchRes) => {
-                    return caches.open(dynamicCache).then((cache) => {
-                        cache.put(e.request.url, fetchRes.clone())
-                        return fetchRes;
+            .then((cacheRes) => {
+                if(cacheRes) {
+                    return cacheRes;
+                }
+                return fetch(e.request)
+                    .then(fetchRes => {
+                        return caches.open(dynamicCacheName).then(cache => {
+                            cache.put(e.request.url, fetchRes.clone());
+                            return fetchRes;
+                        })
                     })
-                })
+                    .catch(err => {
+                        const isHTMLPage = e.request.method == "GET" && e.request.headers.get('accept').includes('text/html');
+                        if(isHTMLPage) {
+                            return caches.match('./pages/fallback.html')
+                        }
+                    })
             })
     )
 }) 
