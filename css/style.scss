@@ -787,6 +787,19 @@ footer {
         }
         // device-section end //
     }
+
+    // fallback section //
+    .fallback {
+        .container {
+            .content {
+                padding: 0 2rem;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    // fallback section end //
 }
 // 320px - 767px end //
 // 768px - 850px //
